@@ -1,3 +1,4 @@
 #!/usr/bin/python3
 ASCIIabc = 'abcdefghijklmnopqrstuvwxyz'
-print(ASCIIabc, end='')
+for w in ASCIIabc:
+    print(w, end="")
