@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-ASCIIabc = 'abcdefghijklmnopqrstuvwxyz'
-for w in ASCIIabc:
-    print(w, end="")
+ASCIIabc = [chr(i) for i in range(97, 123)]
+print(''.join(ASCIIabc), end="")
