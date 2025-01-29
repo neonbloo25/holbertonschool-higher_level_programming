@@ -2,7 +2,7 @@
 """Class that contains two private attributes"""
 
 
-class Square():
+class Square:
     """
     class Square():
         This is the class for the final task,
@@ -33,6 +33,7 @@ class Square():
     @position.setter
     def position(self, value):
         """Now we work with position"""
+        check = 0
         while 1:
             if type(value) is not tuple or len(value) is not 2:
                 check += 1
