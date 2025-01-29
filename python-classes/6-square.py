@@ -17,7 +17,7 @@ class Square():
     @property
     def size(self):
         return (self.__size)
-    
+
     @property
     def position(self):
         return (self.__position)
@@ -35,13 +35,13 @@ class Square():
         """Now we work with position"""
         while 1:
             if type(value) is not tuple or len(value) is not 2:
-                check +=1
+                check += 1
                 break
             if type(value[0]) is not int or type(value[1]) is not int:
-                check +=1
+                check += 1
                 break
             if value[0] < 0 or value[1] < 0:
-                check +=1
+                check += 1
                 break
         if check is 0:
             self.__position = value
