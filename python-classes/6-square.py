@@ -42,7 +42,7 @@ class Square():
                 break
             if value[0] < 0 or value[1] < 0:
                 check += 1
-                break
+            break
         if check is 0:
             self.__position = value
         else:
