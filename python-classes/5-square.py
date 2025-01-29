@@ -28,12 +28,10 @@ class Square():
         return self.__size ** 2
 
     def my_print(self):
-        """Makes squares"""
-        if self.__size == 0:
-            print("")
-        for s in range(self.__size):
+        if self.__size > 0:
             for s in range(self.__size):
-                print("#", end="")
-            print()
+                for s in range(self.__size):
+                    print("#", end="")
+                print()
         else:
             print()
