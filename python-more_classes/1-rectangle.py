@@ -3,8 +3,11 @@
 
 
 class Rectangle:
-    """An empty Rectangle class
-    pass
+    """An Rectangle class w/ 2 pvt atts
+
+    Atts:
+    Width(int)- Size parameter x
+    Height(int)- Size parameter y
     """
     def __init__(self, width=0, height=0):
         self.__width = width
