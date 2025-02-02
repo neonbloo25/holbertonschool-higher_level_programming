@@ -1,26 +1,20 @@
 #!/usr/bin/python3
-"""Class that contains two private attributes"""
+"""creates class Square"""
 
 
 class Square:
-    """
-    class Square():
-        This is the class for the final task,
-        the culmination from all previous tasks and a bit more
-    """
+    """defines class with private instance attributes
+    +size and position
+    +calculates area
+    +print square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Square class' main function"""
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
         return (self.__size)
-
-    @property
-    def position(self):
-        return (self.__position)
 
     @size.setter
     def size(self, value):
@@ -30,9 +24,12 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @property
+    def position(self):
+        return (self.__position)
+
     @position.setter
     def position(self, value):
-        """Now we work with position"""
         check = 0
         while 1:
             if type(value) is not tuple or len(value) is not 2:
