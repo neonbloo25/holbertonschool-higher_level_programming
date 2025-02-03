@@ -5,15 +5,22 @@
 def tebahpla():
     teba1 = 122
     teba2 = 90
+    tebahpla = ""
 
     while teba1 > 64:
         if teba1 % 2 == 0 and teba2 % 2 == 0:
-            print("{}".format(chr(teba1)), end="")
+            tebahpla += chr(teba1)
             teba2 -= 1
             teba1 -= 1
             continue
-        print("{}".format(chr(teba2)), end="")
+        tebahpla += chr(teba2)
         teba2 -= 1
         teba1 -= 1
 
-tebahpla();
+        if len(tebahpla) == 26:
+            break
+
+    print(tebahpla, end="")
+
+
+tebahpla()
