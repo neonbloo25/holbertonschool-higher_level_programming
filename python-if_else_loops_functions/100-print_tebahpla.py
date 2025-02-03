@@ -3,6 +3,7 @@
 
 
 def tebahpla():
+    """Reverse alternting character printing function goooo!"""
     result = ""
     teba1 = 122  # ASCII for 'z'
     teba2 = 90   # ASCII for 'Z'
