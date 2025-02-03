@@ -3,19 +3,17 @@
 
 
 def tebahpla():
-    """Reverse alternting character printing function goooo!"""
-    result = ""
-    teba1 = 122  # ASCII for 'z'
-    teba2 = 90   # ASCII for 'Z'
+    teba1 = 122
+    teba2 = 90
 
     while teba1 > 64:
-        result += chr(teba1)
-        teba1 -= 1
-        if teba1 > 64:
-            result += chr(teba2)
+        if teba1 % 2 == 0 and teba2 % 2 == 0:
+            print("{}".format(chr(teba1)), end="")
+            teba2 -= 1
+            teba1 -= 1
+            continue
+        print("{}".format(chr(teba2)), end="")
         teba2 -= 1
+        teba1 -= 1
 
-    print(result, end="")
-
-
-tebahpla()
+tebahpla();
