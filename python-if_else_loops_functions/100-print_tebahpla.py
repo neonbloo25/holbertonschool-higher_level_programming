@@ -20,7 +20,7 @@ def tebahpla():
         if len(tebahpla) == 26:
             break
 
-    print(tebahpla, end="")
+    print("{}".format(tebahpla), end="")
 
 
 tebahpla()
