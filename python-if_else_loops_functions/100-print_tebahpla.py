@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Print reverse alphabet using ASCIIs alternating(zYx...A)"""
 
+
 def tebahpla():
     result = ""
     teba1 = 122  # ASCII for 'z'
@@ -14,5 +15,6 @@ def tebahpla():
         teba2 -= 1
 
     print(result, end="")
+
 
 tebahpla()
