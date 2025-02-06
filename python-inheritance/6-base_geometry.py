@@ -4,6 +4,7 @@
 
 class BaseGeometry:
     """target class"""
+
     def area(self):
-        """target function"""        
+        """target function"""
         raise Exception("area() is not implemented")
