@@ -4,3 +4,10 @@ The "base_geometry" doctest
 This file tests the base_geometry file
 for edge cases and errors
 
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("my_int", 12)
+
+>>> print(f"{bg.name} is {bg.value}")
+my_int is 12
