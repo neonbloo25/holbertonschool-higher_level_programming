@@ -4,13 +4,10 @@
 
 class MyList(list):
     """Inheriting Class"""
-    def __init__(self):
-        super().__init__()
+
+    def __init__(self, *args):
+        super().__init__(*args)
 
     def print_sorted(self):
         """Target Function"""
-        self.sort(reverse=False)
-
-
-mylist = MyList()
-mylist.print_sorted()
+        print(sorted(self))
