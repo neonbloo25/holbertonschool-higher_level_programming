@@ -32,3 +32,10 @@ with different edge cases.
 Traceback (most recent call last):
 TypeError: 'NoneType' object is not iterable
 
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+>>> my_list3 = MyList([0])
+>>> my_list3 is MyList([0])
+False
