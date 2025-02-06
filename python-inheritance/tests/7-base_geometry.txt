@@ -1,5 +1,6 @@
-The "7-base_geometry.txt" doctest
+The "base_geometry" doctest
 ===========================
-This tests the 7-base_geometry.py class method
-with different edge cases.
+
+This file tests the base_geometry file
+for edge cases and errors
 
