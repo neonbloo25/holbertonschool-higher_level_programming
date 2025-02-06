@@ -17,11 +17,6 @@ with different edge cases.
 >>> my_list.print_sorted()
 [1, 2, 3, 4, 5]
 
-=======================
-Added *args to __init__
-and to super().__init__
-=======================
-
 >>> my_list = MyList([5, 7, 3])
 >>> print(my_list)
 [5, 7, 3]
