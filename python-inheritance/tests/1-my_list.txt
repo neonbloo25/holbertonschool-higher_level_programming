@@ -37,6 +37,13 @@ and to super().__init__
 Traceback (most recent call last):
 TypeError: 'NoneType' object is not iterable
 
+>>> print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'print_sorted' is not defined
+>>> my_list.print_sorted()
+[]
+
 >>> my_list = MyList()
 >>> my_list.print_sorted()
 []
