@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""The ABCs of Python ft. Abstract Method"""
+"""The ABCs of Python ft. sys"""
 __import__("sys")
 
 
