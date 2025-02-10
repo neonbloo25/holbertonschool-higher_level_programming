@@ -4,10 +4,12 @@
 
 class CountedIterator:
     """Key Class"""
+
     def __init__(self, data):
         """func1"""
         self.data = iter(data)
         self.counter = 0
+
 
     def get_count(self):
         """
@@ -15,6 +17,7 @@ class CountedIterator:
         returns count
         """
         return self.counter
+
 
     def __next__(self):
         """
