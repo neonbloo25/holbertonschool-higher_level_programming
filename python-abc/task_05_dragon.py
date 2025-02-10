@@ -4,12 +4,15 @@
 
 class SwimMixin():
     """Class 1"""
-    pass
+    def swim(self):
+        print("The creature swims!")
 
 class FlyMixin():
     """Class 2"""
-    pass
+    def fly(self):
+        print("The creature flies!")
 
 class Dragon(SwimMixin, FlyMixin):
     """Target Class"""
-    pass
+    def roar(self):
+        print("The dragon roars!")
