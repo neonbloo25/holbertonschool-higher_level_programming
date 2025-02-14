@@ -15,10 +15,3 @@ def add_item(filename="add_item.json", *args):
 
     items.extend(args)
     saveJ(filename, items)
-
-    """
-    -Old Code-
-    items = loadJ(filename)
-    items.append(args.items())
-    saveJ(filename, items)
-    """
