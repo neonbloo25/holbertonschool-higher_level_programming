@@ -7,6 +7,6 @@ loadJ = __import__('6-load_from_json_file').load_from_json_file
 
 def add_item(filename="", **args):
     """Target Function"""
-    loadJ(filename)
-    list.append(args)
-    saveJ(filename)
+    items = loadJ(filename)
+    items.append(args)
+    saveJ(filename, items)
