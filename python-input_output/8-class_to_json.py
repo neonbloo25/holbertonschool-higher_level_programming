@@ -33,9 +33,13 @@ def class_to_json(obj):
             'type': 'boolean',
             'value': obj
         }
+    elif hasattr(obj, "__dict__"):  # Handling custom class instances
+        return {
+            'type': 'object',
+            'attributes': {key: class_to_json(value) for key, value in vars(obj).items()}
+        }
     else:
         return {
             'type': 'unknown',
             'value': obj
         }
-
