@@ -12,7 +12,8 @@ class Student:
     def to_json(self, attrs=None):
         """Still target function, altered functionality"""
         if attrs is None:
-            return {key: value for key, value in self.__dict__.items()}
+            return {key: value for key,
+                    value in self.__dict__.items()}
 
         else:
             return {key: value for key,
