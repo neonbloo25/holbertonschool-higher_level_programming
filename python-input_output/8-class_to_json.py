@@ -3,43 +3,26 @@
 
 
 def class_to_json(obj):
-    """Target Class"""
+    """Target Class, with each type case"""
+
     if isinstance(obj, list):
-        return {
-            'type': 'list',
-            'length': len(obj),
-            'elements': [class_to_json(item) for item in obj]
-        }
+        return [class_to_json(item) for item in obj]
+
     elif isinstance(obj, dict):
-        return {
-            'type': 'dict',
-            'length': len(obj),
-            'keys': len(obj.keys()),
-            'values': [class_to_json(value) for value in obj.values()]
-        }
+        return {key: class_to_json(value) for key, value in obj.items()}
+
     elif isinstance(obj, str):
-        return {
-            'type': 'string',
-            'length': len(obj),
-            'value': obj
-        }
+        return obj
+
     elif isinstance(obj, int):
-        return {
-            'type': 'int',
-            'value': obj
-        }
+        return obj
+
     elif isinstance(obj, bool):
-        return {
-            'type': 'boolean',
-            'value': obj
-        }
+        return obj
+
     elif hasattr(obj, "__dict__"):  # Handling custom class instances
-        return {
-            'type': 'object',
-            'attributes': {key: class_to_json(value) for key, value in vars(obj).items()}
-        }
+        return {key: class_to_json(value) for key, value in vars(obj).items()}
+
     else:
-        return {
-            'type': 'unknown',
-            'value': obj
-        }
+        """If nothing matches type"""
+        return obj
