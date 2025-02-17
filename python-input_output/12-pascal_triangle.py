@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-"""I/O Week! tf. Json(ree! ree! ree!)"""
+"""I/O Week! YAY TRIANGLES!!!"""
 
 
 def pascal_triangle(n):
-tri = []
-x = 1
-for r in range():
-    tri.append[x]
-    print
+    """Target Function"""
+    tri = []
+    x = 1
+    for r in range(x, n):
+        tri.append[x]
+        print(tri)
