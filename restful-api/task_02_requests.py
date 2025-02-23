@@ -28,13 +28,16 @@ def fetch_and_save_posts():
     if response.status_code == 200:
         posts = response.json()
 
-    posts_data = [{
-        "id": post["id"],
-        "title": post["title"],
-        "body": post["body"]
-    } for post in posts]
+        posts_data = [{
+            "id": post["id"],
+            "title": post["title"],
+            "body": post["body"]
+        } for post in posts]
 
-    with open("posts.csv", "w", newline="", encoding="utf-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
-        writer.writeheader()
-        writer.writerows(posts_data)
+        with open("posts.csv", "w", newline="", encoding="utf-8") as file:
+            writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
+            writer.writeheader()
+            writer.writerows(posts_data)
+
+    else:
+        print(f"Failed to fetch posts. Status Code: {response.status_code}")
