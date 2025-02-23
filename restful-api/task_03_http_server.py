@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 import http.server
 import socketserver
-"""restfulAPI week! ft.http.server and socketserver"""
+import json
+"""restfulAPI week! ft.http.server, socketserver and json"""
 
 
 class MyRequestHandler(http.server.BaseHTTPRequestHandler):
@@ -24,6 +25,14 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
                 "age": 30,
                 "city": "New York"
             }
+
+            self.wfile.write(json.dumps(data).encode('utf-8'))
+
+        elif self.path == "/status":
+            self.send_response(200)
+            self.send_header('Content-type', 'text/html')
+            self.end_headers()
+            self.wfile.write(b"Ok")
 
         else:
             self.send_response(404)
