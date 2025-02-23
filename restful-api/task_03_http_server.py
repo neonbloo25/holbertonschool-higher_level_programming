@@ -40,9 +40,12 @@ class MyRequestHandler(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(b"Endpoint not found")
 
-if __name__ == "__main__":
-    handler = MyRequestHandler
 
-    with socketserver.TCPServer(("localhost", 8000), handler) as httpd:
+def run(server_class=http.server.HTTPServer, handler_class=MyRequestHandler):
+    with socketserver.TCPServer(("localhost", 8000), handler_class) as httpd:
         print("Server started on http://localhost:8000")
         httpd.serve_forever()
+
+
+if __name__ == "__main__":
+    run()
