@@ -25,7 +25,7 @@ def home():
 @app.route('/data')
 def data():
     if not users:
-        return jsonify({"message": "No users found"}), 404
+        return jsonify({"message": "No users found"}), 200
     usernames = list(users.keys())
     return jsonify(usernames)
 
