@@ -16,13 +16,12 @@ users = {
         "city": "New York"}
 }
 
-
 @app.route('/')
 def home():
     return "Welcome to the Flask API!"
 
 
-@app.route('/data')
+@app.route('/data', methods=['GET'])
 def data():
     if not users:
         return jsonify({"message": "No users found"}), 404
@@ -30,12 +29,12 @@ def data():
     return jsonify(usernames)
 
 
-@app.route('/status')
+@app.route('/status', methods=['GET'])
 def status():
     return "OK"
 
 
-@app.route('/users/<username>')
+@app.route('/users/<username>', methods=['GET'])
 def get_user(username):
     user = users.get(username)
     if user:
