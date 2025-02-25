@@ -2,8 +2,9 @@ from flask import Flask, jsonify, request
 """restfulAPI week ft flask"""
 
 app = Flask(__name__)
+users = {}
 
-users = {
+"""users = {
     "jane": {
         "username": "jane",
         "name": "Jane",
@@ -14,7 +15,8 @@ users = {
         "name": "John",
         "age": 30,
         "city": "New York"}
-}
+}"""
+
 
 @app.route('/')
 def home():
