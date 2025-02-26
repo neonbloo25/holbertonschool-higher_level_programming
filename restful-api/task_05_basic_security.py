@@ -12,7 +12,7 @@ from flask_jwt_extended import (
 
 app = Flask(__name__)
 auth = HTTPBasicAuth()
-app.config['JWT_SECRET_KEY'] = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MDU5OTAxNCwianRpIjoiNDE4NjMxNWQtOTdlYS00YTYwLTk4M2EtZjViZjc2MDkyMGQ3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6eyJ1c2VybmFtZSI6InVzZXIxIiwicm9sZSI6InVzZXIifSwibmJmIjoxNzQwNTk5MDE0LCJjc3JmIjoiODZkNGQyOTUtNzM2ZS00ZDQ5LWI2M2MtNDNjZDIxZDhjNGViIiwiZXhwIjoxNzQwNTk5OTE0fQ.3-rT7I4eGsVnUfpLIF9psEkoSa-w3_dWiQml7wGuHXM"
+app.config['JWT_SECRET_KEY'] = 'your_secret_key'
 jwt = JWTManager(app)
 
 users = {
