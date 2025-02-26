@@ -5,7 +5,6 @@ from flask_jwt_extended import (
     JWTManager,
     jwt_required,
     create_access_token,
-    get_jwt,
     get_jwt_identity
     )
 """restfulAPI week ft. imports"""
@@ -100,4 +99,4 @@ def handle_needs_fresh_token_error(err):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
