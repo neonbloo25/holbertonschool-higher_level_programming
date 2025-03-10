@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Python - Object Relational Mapping ft MySQLdb and sys"""
+"""Lists all states in a database"""
+
 import MySQLdb
 import sys
 
 
 def list_states_N(username, password, database_name):
-    """target func"""
+    """Connects to MySQL server"""
 
     try:
         conn = MySQLdb.connect(host='localhost',
