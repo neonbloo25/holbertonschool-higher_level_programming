@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""Python - Object Relational Mapping"""
+"""Defines the State class that links to the MySQL table states"""
+
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
-
 
 Base = declarative_base()
 
 
 class State(Base):
-    """Base Class"""
-    __tablename__ = "states"
+    """State class that links to the MySQL table states"""
+    __tablename__ = 'states'
 
-    id = Column("id", Integer, primary_key=True, autoincrement=True)
-    name = Column("name", String(128), nullable=False)
-    cities = relationship("City", back_populates="state")
+    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+    name = Column(String(128), nullable=False)
