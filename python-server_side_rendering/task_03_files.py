@@ -4,6 +4,7 @@ import csv
 
 app = Flask(__name__)
 
+
 # Read data from the JSON file
 def read_json():
     with open('products.json', 'r') as file:
