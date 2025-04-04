@@ -7,3 +7,4 @@ variable_load_5.py
 output*.txt
 products.db
 products.py
+*-main.html
